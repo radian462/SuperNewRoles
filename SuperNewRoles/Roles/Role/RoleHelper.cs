@@ -560,7 +560,7 @@ namespace SuperNewRoles
                 case RoleId.ToiletFan:
                     RoleClass.ToiletFan.ToiletFanPlayer.Add(player);
                     break;
-                case (RoleId.SatsumaAndImo):
+                case RoleId.SatsumaAndImo:
                     RoleClass.SatsumaAndImo.SatsumaAndImoPlayer.Add(player);
                     break;
                 case RoleId.EvilButtoner:
@@ -613,6 +613,9 @@ namespace SuperNewRoles
                     break;
                 case RoleId.Slugger:
                     RoleClass.Slugger.SluggerPlayer.Add(player);
+                    break;
+                case RoleId.fakekiller:
+                    RoleClass.fakekiller.fakekillerPlayer.Add(player);
                     break;
                 //ロールアド
                 default:
@@ -1027,7 +1030,10 @@ namespace SuperNewRoles
                 case RoleId.Slugger:
                     RoleClass.Slugger.SluggerPlayer.RemoveAll(ClearRemove);
                     break;
-                //ロールリモベ
+                case (RoleId.fakekiller):
+                    RoleClass.fakekiller.fakekillerPlayer.RemoveAll(ClearRemove);
+                    break;
+                    //ロールリモベ
             }
             ChacheManager.ResetMyRoleChache();
         }
@@ -1085,7 +1091,7 @@ namespace SuperNewRoles
                 case RoleId.Stefinder:
                 case RoleId.PartTimer:
                 case RoleId.Photographer:
-                //タスククリアか
+                    //タスククリアか
                     IsTaskClear = true;
                     break;
             }
@@ -1248,7 +1254,7 @@ namespace SuperNewRoles
                 case RoleId.Stefinder:
                 case RoleId.PartTimer:
                 case RoleId.Photographer:
-                //第三か
+                    //第三か
                     IsNeutral = true;
                     break;
             }
@@ -1357,6 +1363,7 @@ namespace SuperNewRoles
             try
             {
                 if (RoleClass.GhostMechanic.GhostMechanicPlayer.IsCheckListPlayerControl(player)) return RoleId.GhostMechanic;
+                else if (RoleClass.fakekiller.fakekillerPlayer.IsCheckListPlayerControl(player)) return RoleId.fakekiller;
                 //ここが幽霊役職
             }
             catch { }
