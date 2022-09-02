@@ -35,7 +35,7 @@ namespace SuperNewRoles.Roles
             IsMeeting = false;
             IsCoolTimeSetted = false;
             IsStart = false;
-            Agartha.MapData.ClearAndReloads();
+              Agartha.MapData.ClearAndReloads();
             LadderDead.Reset();
             //Map.Data.ClearAndReloads();
             ElectricPatch.Reset();
@@ -176,7 +176,7 @@ namespace SuperNewRoles.Roles
             Photographer.ClearAndReload();
             Stefinder.ClearAndReload();
             Slugger.ClearAndReload();
-            fakekiller.ClearAndReload();
+            Fakekiller.ClearAndReload();
             //ロールクリア
             Quarreled.ClearAndReload();
             Lovers.ClearAndReload();
@@ -3034,13 +3034,13 @@ namespace SuperNewRoles.Roles
                 IsMultiKill = CustomOptions.SluggerIsMultiKill.GetBool();
             }
         }
-        public static class fakekiller
+        public static class Fakekiller
         {
-            public static List<PlayerControl> fakekillerPlayer;
+            public static List<PlayerControl> FakekillerPlayer;
             public static Color32 color = ImpostorRed;
             public static void ClearAndReload()
             {
-                fakekillerPlayer = new();
+                FakekillerPlayer = new();
             }
         }
         //新ロールクラス
