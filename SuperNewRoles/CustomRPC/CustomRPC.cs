@@ -157,7 +157,7 @@ namespace SuperNewRoles.CustomRPC
         Stefinder,
         Stefinder1,
         Slugger,
-        fakekiller,
+        Fakekiller,
         //RoleId
     }
 
@@ -295,7 +295,8 @@ namespace SuperNewRoles.CustomRPC
                         return;
                     }
                 }
-            } else
+            }
+            else
             {
                 RoleClass.BlockPlayers.Add(TargetId);
             }
@@ -331,7 +332,8 @@ namespace SuperNewRoles.CustomRPC
                 {
                     if (source == null) return;
                     airshipStatus.GapPlatform.Use(source);
-                } else
+                }
+                else
                 {
                     airshipStatus.GapPlatform.StopAllCoroutines();
                     airshipStatus.GapPlatform.StartCoroutine(Roles.Impostor.Nun.NotMoveUsePlatform(airshipStatus.GapPlatform));

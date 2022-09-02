@@ -614,8 +614,8 @@ namespace SuperNewRoles
                 case RoleId.Slugger:
                     RoleClass.Slugger.SluggerPlayer.Add(player);
                     break;
-                case RoleId.fakekiller:
-                    RoleClass.fakekiller.fakekillerPlayer.Add(player);
+                case RoleId.Fakekiller:
+                    RoleClass.Fakekiller.FakekillerPlayer.Add(player);
                     break;
                 //ロールアド
                 default:
@@ -1030,8 +1030,8 @@ namespace SuperNewRoles
                 case RoleId.Slugger:
                     RoleClass.Slugger.SluggerPlayer.RemoveAll(ClearRemove);
                     break;
-                case (RoleId.fakekiller):
-                    RoleClass.fakekiller.fakekillerPlayer.RemoveAll(ClearRemove);
+                case RoleId.Fakekiller:
+                    RoleClass.Fakekiller.FakekillerPlayer.RemoveAll(ClearRemove);
                     break;
                     //ロールリモベ
             }
@@ -1363,7 +1363,7 @@ namespace SuperNewRoles
             try
             {
                 if (RoleClass.GhostMechanic.GhostMechanicPlayer.IsCheckListPlayerControl(player)) return RoleId.GhostMechanic;
-                else if (RoleClass.fakekiller.fakekillerPlayer.IsCheckListPlayerControl(player)) return RoleId.fakekiller;
+                else if (RoleClass.Fakekiller.FakekillerPlayer.IsCheckListPlayerControl(player)) return RoleId.Fakekiller;
                 //ここが幽霊役職
             }
             catch { }

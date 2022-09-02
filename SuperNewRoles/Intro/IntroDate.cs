@@ -201,7 +201,7 @@ namespace SuperNewRoles.Intro
         public static IntroDate StefinderIntro = new("Stefinder", RoleClass.Stefinder.color, 1, RoleId.Stefinder, TeamRoleType.Neutral);
         public static IntroDate StefinderIntro1 = new("Stefinder", RoleClass.ImpostorRed, 1, RoleId.Stefinder1, TeamRoleType.Neutral);
         public static IntroDate SluggerIntro = new("Slugger", RoleClass.Slugger.color, 1, RoleId.Slugger, TeamRoleType.Impostor);
-        public static IntroDate fakekillerIntro = new("fakekiller", RoleClass.fakekiller.color, 1, RoleId.fakekiller, TeamRoleType.Impostor, true);
+        public static IntroDate FakekillerIntro = new("Fakekiller", RoleClass.Fakekiller.color, 1, RoleId.Fakekiller, TeamRoleType.Impostor, true);
         //イントロオブジェ
     }
 }
