@@ -176,6 +176,7 @@ namespace SuperNewRoles.Roles
             Photographer.ClearAndReload();
             Stefinder.ClearAndReload();
             Slugger.ClearAndReload();
+            fakekiller.ClearAndReload();
             //ロールクリア
             Quarreled.ClearAndReload();
             Lovers.ClearAndReload();
@@ -3031,6 +3032,15 @@ namespace SuperNewRoles.Roles
                 CoolTime = CustomOptions.SluggerCoolTime.GetFloat();
                 ChargeTime = CustomOptions.SluggerChargeTime.GetFloat();
                 IsMultiKill = CustomOptions.SluggerIsMultiKill.GetBool();
+            }
+        }
+        public static class fakekiller
+        {
+            public static List<PlayerControl> fakekillerPlayer;
+            public static Color32 color = ImpostorRed;
+            public static void ClearAndReload()
+            {
+                fakekillerPlayer = new();
             }
         }
         //新ロールクラス
